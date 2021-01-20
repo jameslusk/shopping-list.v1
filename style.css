@@ -5,3 +5,61 @@
 body > * {
     margin: 10px;
 }
+
+.container {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.inputBox {
+    width: 300px;
+    font-size: 24px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+#c1 {
+    margin: 0px 5px 0px 0px;
+}
+
+#enter {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 2px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 24px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#enter:hover {
+    background-color: #555555;
+    color: white;
+}
+
+h1 {
+    font-size: 52px;
+    margin: 10px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+li {
+    padding: 2px;
+    font-size: 24px;
+}
