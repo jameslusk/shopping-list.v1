@@ -2,6 +2,8 @@ var button = document.getElementById("enter");
 var input = document.getElementById("userInput");
 var ul = document.querySelector("ul");
 var li = document.getElementsByTagName("li");
+var checkBox = cb = document.createElement( "input" );
+
 
 function inputLength() {
     return input.value.length;
@@ -11,17 +13,13 @@ function removeParent(evt) {
 	evt.target.parentNode.remove();
 } 
 
-function underlineParent(event) {
-	event.target.parentNode.classList.toggle("done");
-}
-
 // Accepts user input and adds it to <ul>
 function createListElement() {
     var li = document.createElement("li");
     input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1).toLowerCase();
 
 // Add checkbox element to list
-    var checkBox = cb = document.createElement( "input" );
+    checkBox = cb = document.createElement( "input" );
     cb.type = "checkbox";
     cb.id = "c1";
     cb.value = name;
@@ -37,7 +35,11 @@ function createListElement() {
     li.appendChild(button);
     button.onclick = removeParent;
 
+// HELP HERE -> Trying to write function that appplies line-through list item once checkbox is clicked
+    checkBox.onclick = strikeThrough;
+
 }
+
 
 // Accepts user input with mouse click
 function addListAfterClick() {
@@ -53,8 +55,14 @@ function addListAfterKeypress(event) {
     }
 }
 
-
-
+// HELP HERE -> Trying to write function that appplies line-through list item once checkbox is clicked
+function strikeThrough(event) {
+    if (event.target.getElementsByClassName("strike")) {
+        event.target.classList.toggle("done");
+    }
+// Console log to test
+    console.log("test");
+}
 
 button.addEventListener("click", addListAfterClick); 
 
