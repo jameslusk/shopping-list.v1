@@ -4,11 +4,12 @@ var ul = document.querySelector("ul");
 var li = document.getElementsByTagName("li");
 var checkBox = cb = document.createElement( "input" );
 
-
+// Funtion to inhibit "empty" text field entries
 function inputLength() {
     return input.value.length;
 }
 
+// Delete item function
 function removeParent(evt) {
 	evt.target.parentNode.remove();
 } 
@@ -40,7 +41,6 @@ function createListElement() {
 
 }
 
-
 // Accepts user input with mouse click
 function addListAfterClick() {
     if (inputLength() > 0) {
@@ -55,13 +55,10 @@ function addListAfterKeypress(event) {
     }
 }
 
-// HELP HERE -> Trying to write function that appplies line-through list item once checkbox is clicked
+// Function that appplies line-through list item once checkbox is clicked
 function strikeThrough(event) {
-    if (event.target.getElementsByClassName("strike")) {
-        event.target.classList.toggle("done");
-    }
-// Console log to test
-    console.log("test");
+    var parent = document.getElementById("c1").parentElement;
+    parent.classList.toggle("done");
 }
 
 button.addEventListener("click", addListAfterClick); 
